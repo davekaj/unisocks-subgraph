@@ -1,0 +1,18 @@
+type SockOwner @entity {
+    id: ID!
+    sockBalance: BigDecimal!
+    totalPaid: BigDecimal
+    socks: [Sock!]
+}
+
+type Sock @entity {
+    id: ID! # Sock version printed
+    ethPaid: BigDecimal!
+}
+
+type SockManufacturer @entity {
+    id: ID!
+    symbol: String!
+    decimals: Int!
+    totalSupply: BigDecimal!
+}
